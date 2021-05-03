@@ -25,8 +25,10 @@ const LoginPage = ({ loginUser }) => {
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = event => {
+    if (event) {
+      event.preventDefault();
+    }
     if (email && password) {
       loginUser({ email, password });
     }
@@ -53,7 +55,7 @@ const LoginPage = ({ loginUser }) => {
           required
           value={password}
           onChange={e => setPassword(e.target.value)} /><br /><br />
-        <input type="submit" value="Submit" />
+        <button type="submit">Submit</button>
       </StyledForm>
     </StyledFormContainer>
   );

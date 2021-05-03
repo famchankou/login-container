@@ -52,7 +52,7 @@ const Header = () => {
       </StyledLogoContainer>
       <StyledHeaderUserData>
         <StyledLoggedUser>{user?.email}</StyledLoggedUser>
-        {isAuth && <button onClick={handleLogout}>Logout</button>}
+        {isAuth && <button id="logout" onClick={handleLogout}>Logout</button>}
       </StyledHeaderUserData>
     </StyledHeader>
   );
